@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+void lowerToUpperCase(string &str , int idx){
+    if(idx < 0){
+        return;
+    }
+    str[idx] = 'A' + str[idx] - 'a';
+    lowerToUpperCase(str , idx - 1);
+}
+int main(){
+    string str = "utkarsh";
+    int idx = str.length()-1;
+    lowerToUpperCase(str , idx);
+    cout<<str;
+
+}
