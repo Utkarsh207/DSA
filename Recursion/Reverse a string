@@ -1,0 +1,20 @@
+include<iostream>
+using namespace std;
+void reverse(string &str  , int si , int ei){
+     // Base Case
+    if(si>=ei){
+        
+      return;
+ }
+    char c =  str[si];
+    str[si] = str[ei];
+    str[ei] = c;
+     reverse(str , si + 1 , ei - 1);
+ }
+int main(){
+     string str = "rohit";
+     int si = 0;
+     int ei = str.length() - 1;
+     reverse(str , si  , ei);
+     cout<<str;
+}
