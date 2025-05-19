@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int vowelCount(string str , int idx ){
+    // Base Case
+    if(idx < 0){
+        return 0;
+    }
+    if(str[idx] == 'a' || str[idx] == 'e' || str[idx] == 'i' || str[idx] == 'o' || str[idx] == 'u'){
+        return 1 + vowelCount(str , idx - 1);
+    }
+    else{
+        return vowelCount(str , idx - 1);
+    }
+    
+    
+}
+int main(){
+    string str = "utkarsh";
+    int idx = str.length()-1;
+    int count = 0;
+    cout<<vowelCount(str , idx);
+}
