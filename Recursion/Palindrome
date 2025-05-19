@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+void Palind(string str , int si , int ei){
+    //Base Case
+    if(si>=ei){
+        cout<<"Palindrome";
+        return;
+    }
+    // Base Case
+    if(str[si]!=str[ei]){
+        cout<<"Not a valid Palindrome";
+        return;
+    }
+    Palind(str , si + 1 , ei -1);
+}
+int main(){
+    string str = "namon";
+    int si = 0;
+    int ei = str.length()-1;
+    Palind(str , si , ei);
+}
