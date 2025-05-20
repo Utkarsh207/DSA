@@ -1,0 +1,19 @@
+
+#include<iostream>
+using namespace std;
+bool Search(int arr[] , int target , int idx){
+    // Base Case
+    if(idx < 0){
+        return false;
+    }
+    if(arr[idx]==target){
+       return true;
+    }
+    return Search(arr , target , idx-1);
+}
+int main(){
+    int arr[] ={2,4,7,3,11,8, 12};
+    int target = 8;
+    int n = sizeof(arr)/sizeof(arr[0]);
+    cout<<Search(arr , target , n-1);
+}
