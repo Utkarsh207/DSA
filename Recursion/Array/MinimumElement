@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+void minElement(int arr[] , int n , int idx , int minEle){
+    // Base Case 
+    if(idx == n){
+        cout<<minEle;
+        return;
+    }
+    if(arr[idx] < minEle){
+        minEle = arr[idx];
+    }
+    minElement(arr , n , idx+1 , minEle);
+}
+int main(){
+    int arr[] = {7,2,4,1,6};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    minElement(arr , n ,0 , 100);
+}
