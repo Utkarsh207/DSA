@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+void Print(int arr[] , int idx , int n){
+    // Base Case
+    if(idx==n){
+        return;
+    }
+    cout<<arr[idx]<<" ";
+    Print(arr, idx+1 , n);
+}
+int main(){
+    int arr[] = {1,2,3,4,5};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int index = 0;
+    Print(arr, index, n);
+}
